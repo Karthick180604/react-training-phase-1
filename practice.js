@@ -48,3 +48,10 @@ function restOperator(...num){
     console.log(num)
 }
 restOperator(1,2,3,4,5)
+
+const demo={
+    name:"kenny",
+    age:67
+}
+const {name, age}=demo
+console.log(name, age)
