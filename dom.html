@@ -7,9 +7,10 @@
 </head>
 <body>
     <h1 id="text-field">Hello world</h1>
-    <input type="text" id="change-text" placeholder="enter text to be replaced">
+    <input type="text" id="change-text" placeholder="enter text to be replaced"  oninput="updateInput()">
     <button id="change-button" onclick="manipulation()">Click to change</button>
     <button id="change-style" onclick="changeStyle()">Change style</button>
+    <p id="update"></p>
 </body>
 <script>
     let input=document.getElementById("change-text")
@@ -31,6 +32,12 @@
         body.style.alignItems="center"
         body.style.flexDirection="column"
         body.style.backgroundColor="red"
+    }
+    function updateInput(){
+        let updateElement=document.getElementById("update")
+        let text=document.getElementById("change-text").value
+        updateElement.innerHTML=text
+        console.log("hello")
     }
 </script>
 </html>
