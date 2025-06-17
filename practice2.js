@@ -81,3 +81,15 @@ func().then((data)=>{
     console.error("error",error)
 })
 
+const obj = {
+    name:"john",
+    getName:function(str){
+        return str + this.name;
+    }
+}
+const person1={
+    name:"kenny"
+}
+console.log(obj.getName.call(person1, "hello "))
+
+
